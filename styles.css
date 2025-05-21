@@ -1,0 +1,57 @@
+body {
+  background: #090d11; /* black base */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: linear-gradient(135deg, #090d11 60%, #05ff3e 100%);
+  border-radius: 36px;
+  box-shadow: 0 0 40px 10px #00f0ff55, 0 0 80px 10px #01ff7655;
+  padding: 48px 32px 40px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #00f0ff;
+  background: #0a1619;
+  box-shadow: 0 0 32px #00f0ff77, 0 0 8px #00ffab99;
+  margin-bottom: 24px;
+}
+
+h1 {
+  color: #05ff3e;
+  text-shadow: 0 0 18px #00f0ff, 0 0 6px #01ff76;
+  font-size: 3rem;
+  margin: 0 0 36px 0;
+  letter-spacing: 2px;
+}
+
+.twitter-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #00f0ff, #05ff3e);
+  color: #090d11;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 20px #00f0ff88;
+  transition: background 0.25s, color 0.25s, box-shadow 0.2s;
+  margin-top: 28px;
+}
+
+.twitter-btn:hover {
+  background: linear-gradient(90deg, #05ff3e, #00f0ff);
+  color: #fff;
+  box-shadow: 0 0 32px #00f0ffcc, 0 0 8px #05ff3e99;
+}
