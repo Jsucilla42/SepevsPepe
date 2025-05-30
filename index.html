@@ -68,4 +68,39 @@
     </p>
   </div>
 </body>
+  <script>
+function getNextMonday() {
+  const now = new Date();
+  const dayOfWeek = now.getDay();
+  // 1 = Monday, 0 = Sunday
+  const daysUntilMonday = (8 - dayOfWeek) % 7 || 7;
+  const nextMonday = new Date(now);
+  nextMonday.setDate(now.getDate() + daysUntilMonday);
+  nextMonday.setHours(0, 0, 0, 0); // Midnight Monday
+  return nextMonday;
+}
+
+function updateCountdown() {
+  const now = new Date();
+  const target = getNextMonday();
+  const diff = target - now;
+
+  if (diff <= 0) {
+    document.getElementById('countdown').textContent = "It's Monday!";
+    return;
+  }
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / (3600 * 24));
+  const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  document.getElementById('countdown').textContent =
+    `${days}d ${hours}h ${minutes}m ${seconds}s until next Monday`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 </html>
